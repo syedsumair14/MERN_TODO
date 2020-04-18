@@ -13,7 +13,9 @@ app.use((req, res, next) => {
 
 //Routes
 const userRoutes = require('./routes/user')
+const taskRoutes = require('./routes/task')
 app.use(userRoutes)
+app.use(taskRoutes)
 
 
 mongoose.connect(`mongodb+srv://syedsumair14:${process.env.MONGO_PASS}@mern-todo-soglz.mongodb.net/mern-todo?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true })

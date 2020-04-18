@@ -6,12 +6,17 @@ const taskSchema = new Schema({
         type: String,
         required: true,
     },
+    description: {
+        type: String,
+        required: true
+    },
     completed: {
         type: Boolean,
-        required: false
+        default: false
     },
     creator: {
         type: Schema.Types.ObjectId,
+        required: true,
         ref: 'user'
     }
 }, { timestamps: true })
@@ -19,3 +24,4 @@ const taskSchema = new Schema({
 const task = mongoose.model('task', taskSchema)
 
 module.exports = task
+

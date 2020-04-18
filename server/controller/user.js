@@ -32,7 +32,7 @@ exports.signIn = async (req, res, next) => {
         const isMatch = await bcrypt.compare(password, user.password)
         if (!isMatch) throw { error: 'Invalid Credentials' }
 
-        const token = await jwt.sign({ userName, id: user._id }, process.env.SECRET_KEY, { expiresIn: '1h' })
+        const token = await jwt.sign({ userName, id: user._id }, process.env.SECRET_KEY, { expiresIn: '100h' })
         if (!token) throw { error: 'Something went wrong' }
 
         return res.status(200).json({ user, token })
