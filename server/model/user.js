@@ -20,6 +20,12 @@ const userSchema = new Schema({
     }]
 })
 
+userSchema.methods.deleteTodo = function (id) {
+    const todo = this.todo.filter(todo => todo != id)
+    this.todo = todo
+    return this.save()
+}
+
 const user = mongoose.model('user', userSchema)
 
 module.exports = user

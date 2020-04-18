@@ -78,6 +78,10 @@ exports.deleteTodo = async (req, res, next) => {
     try {
         const deletedTask = await Task.findByIdAndRemove({ _id: id, creator })
         if (!deletedTask) throw { status: 404, error: 'Task not found' }
+
+        const user = await User.findById(creator)
+        user.deleteTodo(id)
+
         return res.status(200).json(deletedTask)
     } catch (error) {
         res.status(error.status || 500).json({ error: error.error || 'Something went wrong' })
