@@ -17,7 +17,11 @@ const userSchema = new Schema({
     todo: [{
         type: Schema.Types.ObjectId,
         ref: 'task'
-    }]
+    }],
+    image: {
+        type: Schema.Types.ObjectId,
+        ref: 'image'
+    }
 })
 
 userSchema.methods.deleteTodo = function (id) {
