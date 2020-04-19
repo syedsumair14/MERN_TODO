@@ -30,6 +30,12 @@ userSchema.methods.deleteTodo = function (id) {
     return this.save()
 }
 
+userSchema.methods.deleteImage = function (id) {
+    const image = this.image
+    this.image = undefined
+    return this.save()
+}
+
 const user = mongoose.model('user', userSchema)
 
 module.exports = user

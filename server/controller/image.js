@@ -40,3 +40,21 @@ exports.editImage = async (req, res, next) => {
     }
 
 }
+
+exports.removeImage = async (req, res, next) => {
+    const { creator } = req
+
+    try {
+        const user = await User.findById(creator)
+        const image = await Image.findByIdAndRemove(user.image)
+        const deleteImage = await user.deleteImage(user.image)
+
+        fs.unlink(image.imagePath, err => {
+            if (err) console.log(err)
+        })
+
+        res.status(201).json({ message: 'Image removed' })
+    } catch (error) {
+        res.status(500).json({ error: error.message })
+    }
+}
