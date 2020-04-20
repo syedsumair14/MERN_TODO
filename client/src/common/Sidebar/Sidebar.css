@@ -2,7 +2,7 @@
     height: 100vh;
     width: 225px;
     max-width: 225px ;
-    background-color: #aaa;
+    background-color: #30475e;
 }
 
 .profile-image-wrapper {
@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(117, 126, 129);
+    background-color: #222831;
 }
 
 .user-name {
@@ -34,13 +34,29 @@
 }
 
 .sidebar-content {
-    background-color: #aaa;
+    background-color: #30475e;
 }
 
 .option-list {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
 }
 
 .option-list li {
+    display: flex;
+    justify-content: center;
     padding: 0.7em;
+    cursor: pointer;
+}
+
+.option-list li:hover,
+.option-list li:focus  {
+    background-color: hsl(0, 0%, 47%);;
+}
+
+.option-list li a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
 }

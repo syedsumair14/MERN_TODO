@@ -1,7 +1,10 @@
 import React from 'react'
+import './Button.css'
 
 export default function Button(props) {
     return (
-        <button className="button">{props.name}</button>
+        <button className="button-custom">
+            {props.name}
+        </button>
     )
 }

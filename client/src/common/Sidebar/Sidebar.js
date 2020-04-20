@@ -1,5 +1,7 @@
 import React from 'react'
 import './Sidebar.css'
+import { MENU } from './Menu'
+
 
 export default function Sidebar() {
     return (
@@ -14,11 +16,7 @@ export default function Sidebar() {
             </section>
             <main className="sidebar-content">
                 <ul className="option-list">
-                    <li><a>Some Option</a></li>
-                    <li><a>Some Option</a></li>
-                    <li><a>Some Option</a></li>
-                    <li><a>Some Option</a></li>
-                    <li><a>Some Option</a></li>
+                    {MENU.map((menu, idx) => <li key={idx}><a href=''>{menu.title}</a></li>)}
                 </ul>
             </main>
         </div>

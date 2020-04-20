@@ -8,7 +8,7 @@ class MasterContainer extends Component {
             <div className="row no-gutters">
                 <Sidebar />
                 <div>
-                    <Header />
+                    <Header head="I come as a prop" />
                     {this.props.children}
                 </div>
             </div>

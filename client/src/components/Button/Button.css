@@ -1,0 +1,7 @@
+.button-custom {
+    padding: 0.25em 0.75em;
+    border: 1px solid #DDD;
+    background-color: #fff;
+    border-radius: 0.25em;
+    margin-left: 0.25em;
+}

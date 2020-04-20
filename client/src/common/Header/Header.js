@@ -1,10 +1,10 @@
 import React from 'react'
 import './Header.css'
 
-export default function Header() {
+export default function Header(props) {
     return (
-        <div className="header">
-            I'm from header
+        <div className="header d-flex justify-content-center head-title">
+            {props.head}
         </div>
     )
 }

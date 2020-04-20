@@ -12,7 +12,7 @@ export default function Card() {
                 <div className="description">
                     this will be description of todo
            </div>
-                <div className="d-flex">
+                <div className="d-flex p-2">
                     <Button name="EDIT" />
                     <Button name="DELETE" />
                 </div>
