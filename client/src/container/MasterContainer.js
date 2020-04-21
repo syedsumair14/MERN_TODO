@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Sidebar from '../common/Sidebar/Sidebar'
 import Header from '../common/Header/Header'
+import Modal from '../common/Modal/Modal'
 
 class MasterContainer extends Component {
     render() {
@@ -9,6 +10,7 @@ class MasterContainer extends Component {
                 <Sidebar />
                 <div>
                     <Header head="I come as a prop" />
+                    <Modal />
                     {this.props.children}
                 </div>
             </div>

@@ -13,7 +13,9 @@ export default function Card() {
                     this will be description of todo
            </div>
                 <div className="d-flex p-2">
-                    <Button name="EDIT" />
+                    <span data-toggle="modal" data-target="#exampleModal">
+                        <Button name="EDIT" />
+                    </span>
                     <Button name="DELETE" />
                 </div>
             </div>

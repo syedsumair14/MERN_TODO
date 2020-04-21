@@ -4,7 +4,9 @@ import Card from '../Card/Card'
 class Feed extends Component {
     render() {
         return (
-            <Card />
+            <>
+                <Card />
+            </>
         )
     }
 }
